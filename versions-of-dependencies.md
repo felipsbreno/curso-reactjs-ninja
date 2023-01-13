@@ -17,7 +17,7 @@ Qualquer dúvida, abra uma issue aqui no repositório =)
 
 ## Versão do Node.js
 
-Para que as dependências funcionem corretamente, é recomendado ter instalado a versão 10 do Node.js no seu computador.
+De preferência, use a versão LTS mais recente.
 
 ## Módulo React + Webpack
 
@@ -83,10 +83,10 @@ npm install --save-dev react-hot-loader@3.0.0-beta.2
 
 ### Vídeo 10
 
-standard (pode ser a última versão) e standard-loader:
+standard e standard-loader:
 
 ```
-npm install --save-dev standard standard-loader@4
+npm install --save-dev standard@16 standard-loader@4
 ```
 
 ## Módulo 2
@@ -96,7 +96,7 @@ npm install --save-dev standard standard-loader@4
 Instalação do `jest-cli`:
 
 ```
-npm install --save-dev jest-cli@15
+npm install --save-dev jest-cli@21
 ```
 
 ### M2#A07
@@ -104,13 +104,22 @@ npm install --save-dev jest-cli@15
 Instalação do `babel-core` e `babel-jest`:
 
 ```
-npm install --save-dev babel-core@6 babel-jest@15
+npm install --save-dev babel-core@6 babel-jest@21
 ```
 
 Comando completo (com todas as dependências dessa parte):
 
 ```
-npm install --save-dev babel-core@6 babel-jest@15 babel-preset-es2015 babel-preset-stage-0
+npm install --save-dev babel-core@6 babel-jest@21 babel-preset-es2015 babel-preset-stage-0
+```
+
+**Obs:** Se você estiver tendo algum erro relacionado ao "Handlebars", crie um
+arquivo chamado `jest.config.js` na raiz do seu projeto com o conteúdo:
+
+```js
+module.exports = {
+  coverageReporters: ['json', 'lcovonly', 'text', 'clover']
+}
 ```
 
 ### M2#A30 e M3#A43
